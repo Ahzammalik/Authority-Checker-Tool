@@ -3,22 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Free Domain Authority Checker Tool – Instantly check DA, PA, and Spam Score of any website. Get accurate SEO metrics using Moz API.">
-    <meta name="keywords" content="Domain Authority Checker, DA PA Checker, SEO Tools, Website Authority, Moz DA, Page Authority, Spam Score Checker">
-    <title>Domain Authority Checker – Free DA PA Checker Online Tool</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <title>Free Website Traffic Checker – Estimate Site Visitors Instantly | AdProfitX</title>
+    <meta name="description" content="Use our free Website Traffic Checker tool to estimate monthly visitors, page views, and rankings of any website. Analyze competitor traffic, sources, and trends in seconds.">
+    <meta name="keywords" content="website traffic checker, free website visitor checker, estimate site traffic, competitor traffic analysis, SEO tools, online traffic estimator, free analytics tool">
+    <meta name="author" content="AdProfitX">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://adprofitx.com/traffic-checker">
+    <meta property="og:title" content="Free Website Traffic Checker – Estimate Site Visitors Instantly">
+    <meta property="og:description" content="Check monthly visits, rankings, and competitor traffic with our free Website Traffic Checker tool.">
+    <meta property="og:image" content="https://adprofitx.com/images/traffic-checker-preview.png">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://adprofitx.com/traffic-checker">
+    <meta property="twitter:title" content="Free Website Traffic Checker – Estimate Site Visitors Instantly">
+    <meta property="twitter:description" content="Analyze any website's visitors, traffic sources, and rankings with our free Website Traffic Checker tool.">
+    <meta property="twitter:image" content="https://adprofitx.com/images/traffic-checker-preview.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="https://adprofitx.com/favicon.ico">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Website Traffic Checker",
+      "url": "https://adprofitx.com/traffic-checker",
+      "description": "Free tool to estimate website traffic and visitor statistics for any domain",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "AdProfitX"
+      }
+    }
+    </script>
+    
     <style>
         :root {
-            --primary-blue: #2563eb;
-            --primary-dark-blue: #1d4ed8;
-            --light-blue: #dbeafe;
-            --white: #ffffff;
-            --light-gray: #f3f4f6;
-            --text-gray: #4b5563;
-            --dark-gray: #1f2937;
-            --border-radius: 8px;
-            --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --primary: #4361ee;
+            --primary-dark: #3a56d4;
+            --secondary: #7209b7;
+            --accent: #f72585;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --light-gray: #e9ecef;
+            --success: #4cc9f0;
+            --warning: #f9c74f;
+            --danger: #f94144;
+            --body-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.3s ease;
+        }
+        
+        .dark-mode {
+            --body-bg: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --light-gray: #334155;
         }
         
         * {
@@ -29,9 +93,10 @@
         
         body {
             font-family: 'Inter', sans-serif;
+            background-color: var(--body-bg);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: var(--dark-gray);
-            background-color: var(--white);
+            transition: var(--transition);
         }
         
         .container {
@@ -41,366 +106,533 @@
             padding: 0 20px;
         }
         
-        /* Header Styles */
+        /* Header & Navigation */
         header {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark-blue) 100%);
-            color: var(--white);
-            padding: 1rem 0;
+            background-color: var(--card-bg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
         }
         
-        .header-container {
+        .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 20px 0;
         }
         
         .logo {
-            font-size: 1.5rem;
+            font-size: 24px;
             font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
             display: flex;
             align-items: center;
         }
         
         .logo i {
-            margin-right: 0.5rem;
+            margin-right: 10px;
         }
         
-        nav ul {
+        .nav-menu {
             display: flex;
             list-style: none;
         }
         
-        nav li {
-            margin-left: 1.5rem;
+        .nav-menu li {
+            margin-left: 30px;
         }
         
-        nav a {
-            color: var(--white);
+        .nav-menu a {
+            color: var(--text-primary);
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.3s;
+            transition: var(--transition);
         }
         
-        nav a:hover {
-            opacity: 0.9;
+        .nav-menu a:hover {
+            color: var(--primary);
         }
         
         .mobile-menu-btn {
             display: none;
             background: none;
             border: none;
-            color: var(--white);
-            font-size: 1.5rem;
+            font-size: 24px;
+            color: var(--text-primary);
             cursor: pointer;
         }
         
+        .theme-toggle {
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            cursor: pointer;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        
+        /* Hero Section */
         .hero {
+            padding: 80px 0;
             text-align: center;
-            padding: 3rem 0;
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-dark-blue) 100%);
-            color: var(--white);
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            margin-bottom: 40px;
         }
         
         .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 3rem;
+            margin-bottom: 20px;
             font-weight: 700;
         }
         
         .hero p {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             max-width: 700px;
-            margin: 0 auto;
+            margin: 0 auto 30px;
             opacity: 0.9;
         }
         
         /* Tool Section */
-        .tool-section {
-            padding: 3rem 0;
-            background-color: var(--light-gray);
-        }
-        
         .tool-container {
-            background-color: var(--white);
+            background-color: var(--card-bg);
             border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 2rem;
-            max-width: 800px;
-            margin: 0 auto;
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            transition: var(--transition);
         }
         
         .input-group {
             display: flex;
-            margin-bottom: 1.5rem;
+            margin-bottom: 20px;
         }
         
-        .url-input {
+        .domain-input {
             flex: 1;
-            padding: 0.75rem 1rem;
-            border: 2px solid #e5e7eb;
+            padding: 15px 20px;
+            border: 2px solid var(--light-gray);
             border-radius: var(--border-radius) 0 0 var(--border-radius);
-            font-size: 1rem;
-            transition: border-color 0.3s;
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: var(--card-bg);
+            color: var(--text-primary);
         }
         
-        .url-input:focus {
+        .domain-input:focus {
             outline: none;
-            border-color: var(--primary-blue);
+            border-color: var(--primary);
         }
         
-        .check-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
+        .analyze-btn {
+            padding: 15px 30px;
+            background-color: var(--primary);
+            color: white;
             border: none;
-            padding: 0 1.5rem;
             border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: var(--transition);
         }
         
-        .check-btn:hover {
-            background-color: var(--primary-dark-blue);
+        .analyze-btn:hover {
+            background-color: var(--primary-dark);
         }
         
-        .results-box {
-            background-color: var(--light-blue);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            margin-top: 1.5rem;
+        .examples {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .example-chip {
+            padding: 8px 16px;
+            background-color: var(--light-gray);
+            border-radius: 50px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .example-chip:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        /* Results Section */
+        .results {
             display: none;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            transition: var(--transition);
         }
         
-        .results-box.visible {
+        .results-visible {
             display: block;
         }
         
-        .metric {
+        .results-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
-            padding-bottom: 1rem;
-            border-bottom: 1px solid #bfdbfe;
+            align-items: center;
+            margin-bottom: 30px;
         }
         
-        .metric:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
+        .results-header h2 {
+            font-size: 24px;
         }
         
-        .metric-name {
-            font-weight: 600;
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        
+        .metric-card {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .dark-mode .metric-card {
+            background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
         }
         
         .metric-value {
+            font-size: 2.5rem;
             font-weight: 700;
-            color: var(--primary-dark-blue);
+            margin-bottom: 10px;
+            color: var(--primary);
         }
         
-        .api-config {
-            margin-top: 1.5rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #e5e7eb;
-            font-size: 0.9rem;
-            color: var(--text-gray);
+        .metric-label {
+            font-size: 14px;
+            color: var(--text-secondary);
         }
         
-        .api-config summary {
-            cursor: pointer;
-            font-weight: 500;
+        .charts-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
         }
         
-        .api-config-content {
-            margin-top: 1rem;
+        .chart-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
         }
         
-        .api-input {
-            width: 100%;
-            padding: 0.5rem;
-            border: 1px solid #e5e7eb;
+        .chart-title {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .chart-placeholder {
+            height: 250px;
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+        }
+        
+        .disclaimer {
+            background-color: #fffbeb;
+            border-left: 4px solid #f59e0b;
+            padding: 16px;
             border-radius: 4px;
-            margin-top: 0.5rem;
+            font-size: 14px;
+            margin-top: 20px;
         }
         
-        /* Section Common Styles */
+        .dark-mode .disclaimer {
+            background-color: #451a03;
+            border-left-color: #d97706;
+        }
+        
+        /* Section Styling */
         .section {
-            padding: 3rem 0;
+            padding: 60px 0;
         }
         
         .section-title {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
             text-align: center;
-            color: var(--dark-gray);
+            margin-bottom: 40px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
+        }
+        
+        .section-title p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
         }
         
         /* About Section */
         .about-content {
-            margin-bottom: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: center;
         }
         
-        .about-content h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.5rem;
-            color: var(--primary-dark-blue);
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--text-primary);
         }
         
-        .about-content p {
-            margin-bottom: 1rem;
-            color: var(--text-gray);
+        .about-text p {
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .about-image {
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
         
         /* Blog Section */
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
         }
         
         .blog-card {
-            background: var(--white);
+            background-color: var(--card-bg);
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: var(--box-shadow);
-            transition: transform 0.3s;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
         }
         
         .blog-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.05);
         }
         
         .blog-content {
-            padding: 1.5rem;
+            padding: 20px;
+        }
+        
+        .blog-date {
+            font-size: 14px;
+            color: var(--primary);
+            margin-bottom: 10px;
         }
         
         .blog-title {
-            font-size: 1.2rem;
-            margin-bottom: 0.5rem;
-            color: var(--primary-dark-blue);
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-primary);
         }
         
         .blog-excerpt {
-            color: var(--text-gray);
-            margin-bottom: 1rem;
+            color: var(--text-secondary);
+            margin-bottom: 15px;
         }
         
         .read-more {
-            color: var(--primary-blue);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover i {
+            transform: translateX(3px);
         }
         
         /* Policy Sections */
         .policy-content {
-            max-width: 800px;
-            margin: 0 auto;
+            background-color: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            margin-bottom: 40px;
+            transition: var(--transition);
         }
         
         .policy-section {
-            margin-bottom: 2rem;
+            margin-bottom: 30px;
         }
         
         .policy-section h3 {
-            font-size: 1.3rem;
-            margin: 1.5rem 0 0.5rem;
-            color: var(--primary-dark-blue);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-primary);
         }
         
         .policy-section p {
-            margin-bottom: 1rem;
-            color: var(--text-gray);
+            margin-bottom: 15px;
+            color: var(--text-secondary);
+        }
+        
+        .policy-section ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+            color: var(--text-secondary);
         }
         
         /* Contact Section */
         .contact-container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
         }
         
         .contact-info {
-            background: var(--light-blue);
-            padding: 2rem;
+            background: linear-gradient(135deg, #4361ee 0%, #3a0ca3 100%);
+            color: white;
+            padding: 40px;
             border-radius: var(--border-radius);
         }
         
         .contact-info h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-dark-blue);
+            font-size: 1.5rem;
+            margin-bottom: 20px;
         }
         
         .contact-details {
-            margin-bottom: 1.5rem;
+            list-style: none;
         }
         
-        .contact-details p {
-            margin-bottom: 0.5rem;
+        .contact-details li {
             display: flex;
             align-items: center;
+            margin-bottom: 15px;
         }
         
         .contact-details i {
-            margin-right: 0.5rem;
-            color: var(--primary-blue);
+            margin-right: 15px;
+            font-size: 20px;
         }
         
-        .contact-form input,
-        .contact-form textarea {
+        .contact-form {
+            background-color: var(--card-bg);
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            color: var(--text-primary);
+        }
+        
+        .form-control {
             width: 100%;
-            padding: 0.75rem;
-            margin-bottom: 1rem;
-            border: 1px solid #e5e7eb;
-            border-radius: 4px;
+            padding: 12px 15px;
+            border: 2px solid var(--light-gray);
+            border-radius: var(--border-radius);
+            font-size: 16px;
+            transition: var(--transition);
+            background-color: var(--card-bg);
+            color: var(--text-primary);
         }
         
-        .contact-form textarea {
-            min-height: 150px;
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
         }
         
         .submit-btn {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            padding: 15px 30px;
+            background-color: var(--primary);
+            color: white;
             border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 4px;
+            border-radius: var(--border-radius);
+            font-size: 16px;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: var(--transition);
         }
         
         .submit-btn:hover {
-            background-color: var(--primary-dark-blue);
-        }
-        
-        /* Ad Sections */
-        .ad-section {
-            margin: 2rem auto;
-            text-align: center;
-            max-width: 800px;
+            background-color: var(--primary-dark);
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark-gray);
-            color: var(--white);
-            padding: 2rem 0;
+            background-color: var(--card-bg);
+            padding: 60px 0 30px;
+            transition: var(--transition);
         }
         
         .footer-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
         }
         
         .footer-column h3 {
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
         }
         
         .footer-links {
@@ -408,58 +640,127 @@
         }
         
         .footer-links li {
-            margin-bottom: 0.5rem;
+            margin-bottom: 10px;
         }
         
         .footer-links a {
-            color: var(--white);
+            color: var(--text-secondary);
             text-decoration: none;
-            opacity: 0.8;
-            transition: opacity 0.3s;
+            transition: var(--transition);
         }
         
         .footer-links a:hover {
-            opacity: 1;
+            color: var(--primary);
         }
         
-        .copyright {
-            margin-top: 2rem;
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-gray);
+            color: var(--text-primary);
+            border-radius: 50%;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .footer-bottom {
             text-align: center;
-            opacity: 0.8;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            border-top: 1px solid var(--light-gray);
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* AdSense Placeholder */
+        .ad-container {
+            background-color: var(--light-gray);
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 40px 0;
+            text-align: center;
+            color: var(--text-secondary);
         }
         
         /* Responsive Design */
+        @media (max-width: 992px) {
+            .charts-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-content,
+            .contact-container,
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
         @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                background-color: var(--card-bg);
+                width: 100%;
+                height: calc(100vh - 80px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-menu.active {
+                left: 0;
+            }
+            
+            .nav-menu li {
+                margin: 15px 0;
+            }
+            
             .mobile-menu-btn {
                 display: block;
             }
             
-            nav ul {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: var(--primary-blue);
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .input-group {
                 flex-direction: column;
-                padding: 1rem 0;
             }
             
-            nav ul.active {
-                display: flex;
+            .domain-input {
+                border-radius: var(--border-radius) var(--border-radius) 0 0;
             }
             
-            nav li {
-                margin: 0;
+            .analyze-btn {
+                border-radius: 0 0 var(--border-radius) var(--border-radius);
             }
             
-            nav a {
-                display: block;
-                padding: 0.75rem 1.5rem;
+            .about-content,
+            .contact-container,
+            .footer-content {
+                grid-template-columns: 1fr;
             }
             
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 576px) {
             .hero h1 {
                 font-size: 2rem;
             }
@@ -468,522 +769,404 @@
                 font-size: 1rem;
             }
             
-            .input-group {
-                flex-direction: column;
+            .results-grid {
+                grid-template-columns: 1fr;
             }
             
-            .url-input {
-                border-radius: var(--border-radius) var(--border-radius) 0 0;
+            .tool-container,
+            .policy-content,
+            .contact-form,
+            .contact-info {
+                padding: 20px;
             }
-            
-            .check-btn {
-                border-radius: 0 0 var(--border-radius) var(--border-radius);
-                padding: 0.75rem;
-            }
-            
-            .metric {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .metric-value {
-                margin-top: 0.5rem;
-            }
-        }
-        
-        .loading {
-            display: none;
-            text-align: center;
-            margin: 1rem 0;
-        }
-        
-        .loading.visible {
-            display: block;
-        }
-        
-        .spinner {
-            border: 4px solid rgba(0, 0, 0, 0.1);
-            border-left: 4px solid var(--primary-blue);
-            border-radius: 50%;
-            width: 30px;
-            height: 30px;
-            animation: spin 1s linear infinite;
-            margin: 0 auto;
-        }
-        
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        
-        /* Tabs for additional sections */
-        .tabs {
-            display: flex;
-            flex-wrap: wrap;
-            margin: 0 auto 2rem;
-            max-width: 800px;
-            border-bottom: 1px solid #e5e7eb;
-        }
-        
-        .tab {
-            padding: 0.75rem 1.5rem;
-            cursor: pointer;
-            font-weight: 500;
-            color: var(--text-gray);
-            border-bottom: 3px solid transparent;
-        }
-        
-        .tab.active {
-            color: var(--primary-blue);
-            border-bottom: 3px solid var(--primary-blue);
-        }
-        
-        .tab-content {
-            display: none;
-        }
-        
-        .tab-content.active {
-            display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Header Section -->
+    <!-- Header -->
     <header>
-        <div class="container header-container">
-            <div class="logo">
-                <i class="fas fa-chart-line"></i>
-                <span>DA Checker</span>
-            </div>
-            
-            <button class="mobile-menu-btn" id="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav>
-                <ul id="nav-menu">
+        <div class="container">
+            <div class="nav-container">
+                <a href="#" class="logo">
+                    <i class="fas fa-chart-line"></i>
+                    AdProfitX
+                </a>
+                
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <ul class="nav-menu" id="navMenu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li>
+                        <button class="theme-toggle" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Domain Authority Checker – Free DA/PA Tool</h1>
-            <p>Check Website Domain Authority (DA), Page Authority (PA), Spam Score & SEO Metrics Instantly</p>
+            <h1>Website Traffic Checker</h1>
+            <p>Estimate monthly visitors, traffic sources, and engagement metrics for any website</p>
         </div>
     </section>
 
-    <!-- Top Ad Slot -->
-    <div class="container ad-section">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4313544696010088"
-             crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4313544696010088"
-             data-ad-slot="2931939531"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- Tool Section -->
-    <section class="tool-section">
-        <div class="container">
-            <div class="tool-container">
-                <form id="domain-checker-form">
-                    <div class="input-group">
-                        <input type="url" class="url-input" id="website-url" placeholder="Enter website URL (e.g., https://example.com)" required>
-                        <button type="submit" class="check-btn">Check Authority</button>
-                    </div>
-                </form>
-                
-                <div class="loading" id="loading">
-                    <div class="spinner"></div>
-                    <p>Fetching domain data...</p>
-                </div>
-                
-                <div class="results-box" id="results-box">
-                    <div class="metric">
-                        <span class="metric-name">Domain Authority (DA)</span>
-                        <span class="metric-value" id="da-value">--</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-name">Page Authority (PA)</span>
-                        <span class="metric-value" id="pa-value">--</span>
-                    </div>
-                    <div class="metric">
-                        <span class="metric-name">Spam Score</span>
-                        <span class="metric-value" id="spam-value">--</span>
-                    </div>
-                </div>
-                
-                <details class="api-config">
-                    <summary>API Configuration (Advanced)</summary>
-                    <div class="api-config-content">
-                        <p>For frequent usage, consider using your own Moz API credentials:</p>
-                        <label for="access-id">Moz Access ID:</label>
-                        <input type="text" id="access-id" class="api-input" placeholder="Your Moz Access ID">
-                        
-                        <label for="api-key">Moz API Key:</label>
-                        <input type="text" id="api-key" class="api-input" placeholder="Your Moz API Key">
-                        
-                        <button id="save-api" style="margin-top: 0.5rem; padding: 0.5rem 1rem; background: var(--primary-blue); color: white; border: none; border-radius: 4px; cursor: pointer;">Save API Keys</button>
-                    </div>
-                </details>
+    <!-- Main Tool Section -->
+    <div class="container">
+        <div class="tool-container">
+            <h2>Analyze Website Traffic</h2>
+            <p>Enter a domain name to estimate its monthly traffic and performance metrics</p>
+            
+            <div class="input-group">
+                <input type="text" class="domain-input" id="domainInput" placeholder="Enter domain (e.g., example.com)">
+                <button class="analyze-btn" id="analyzeBtn">Analyze</button>
+            </div>
+            
+            <div class="examples">
+                <div class="example-chip" data-domain="google.com">google.com</div>
+                <div class="example-chip" data-domain="amazon.com">amazon.com</div>
+                <div class="example-chip" data-domain="facebook.com">facebook.com</div>
+                <div class="example-chip" data-domain="youtube.com">youtube.com</div>
+                <div class="example-chip" data-domain="wikipedia.org">wikipedia.org</div>
+            </div>
+            
+            <div class="ad-container">
+                <p>Ad Space - Google AdSense</p>
             </div>
         </div>
-    </section>
 
-    <!-- Middle Ad Slot -->
-    <div class="container ad-section">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4313544696010088"
-             crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4313544696010088"
-             data-ad-slot="2931939531"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-    </div>
-
-    <!-- Tabs for additional sections -->
-    <div class="container">
-        <div class="tabs">
-            <div class="tab active" data-tab="about">About</div>
-            <div class="tab" data-tab="blog">Blog</div>
-            <div class="tab" data-tab="privacy">Privacy Policy</div>
-            <div class="tab" data-tab="terms">Terms & Conditions</div>
-            <div class="tab" data-tab="disclaimer">Disclaimer</div>
-            <div class="tab" data-tab="contact">Contact Us</div>
+        <!-- Results Section -->
+        <div class="results" id="results">
+            <div class="results-header">
+                <h2>Traffic Report for <span id="reportDomain">example.com</span></h2>
+                <button class="analyze-btn" id="newAnalysisBtn">New Analysis</button>
+            </div>
+            
+            <div class="results-grid">
+                <div class="metric-card">
+                    <div class="metric-value" id="monthlyVisits">245K</div>
+                    <div class="metric-label">Monthly Visits</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="uniqueVisitors">183K</div>
+                    <div class="metric-label">Unique Visitors</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="pageViews">3.2</div>
+                    <div class="metric-label">Pages/Visit</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="avgDuration">2:45</div>
+                    <div class="metric-label">Avg. Visit Duration</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="bounceRate">42%</div>
+                    <div class="metric-label">Bounce Rate</div>
+                </div>
+                
+                <div class="metric-card">
+                    <div class="metric-value" id="globalRank">#4,382</div>
+                    <div class="metric-label">Global Rank</div>
+                </div>
+            </div>
+            
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3 class="chart-title">Traffic Sources</h3>
+                    <div class="chart-placeholder">Traffic Sources Chart</div>
+                </div>
+                
+                <div class="chart-card">
+                    <h3 class="chart-title">Top Countries</h3>
+                    <div class="chart-placeholder">Top Countries Chart</div>
+                </div>
+            </div>
+            
+            <div class="disclaimer">
+                <p><strong>Disclaimer:</strong> These estimates are based on public data and statistical models. They are not from official analytics and should be used for informational purposes only. Actual traffic may vary based on many factors.</p>
+            </div>
+            
+            <div class="ad-container">
+                <p>Ad Space - Google AdSense</p>
+            </div>
         </div>
-    </div>
 
-    <!-- About Section -->
-    <section class="section tab-content active" id="about-tab">
-        <div class="container">
-            <h2 class="section-title">About Domain Authority and SEO Metrics</h2>
+        <!-- About Section -->
+        <section class="section" id="about">
+            <div class="section-title">
+                <h2>About AdProfitX</h2>
+                <p>Learn about our mission and how we help businesses grow</p>
+            </div>
             
             <div class="about-content">
-                <h3>What is Domain Authority (DA)?</h3>
-                <p>Domain Authority is a search engine ranking score developed by Moz that predicts how well a website will rank on search engine result pages (SERPs). Domain Authority scores range from 1 to 100, with higher scores corresponding to a greater ability to rank.</p>
-                <p>Domain Authority is calculated by evaluating multiple factors, including linking root domains and the number of total links, into a single DA score. This score can then be used when comparing websites or tracking the "ranking strength" of a website over time.</p>
+                <div class="about-text">
+                    <h3>We Provide Digital Marketing Insights</h3>
+                    <p>AdProfitX was founded in 2018 with a mission to democratize access to website analytics and competitive intelligence. Our tools are designed to help marketers, business owners, and SEO professionals make data-driven decisions.</p>
+                    <p>Our traffic estimation algorithm analyzes hundreds of data points to provide accurate traffic estimates for any website. We combine multiple data sources including search engine data, social signals, backlink profiles, and historical trends.</p>
+                    <p>While no estimation tool can replace actual analytics data, our system provides the most accurate estimates possible without access to private analytics accounts.</p>
+                </div>
                 
-                <h3>Why Does Domain Authority Matter for SEO?</h3>
-                <p>Domain Authority is important because it helps you understand how your website compares to competitors and estimate how difficult it will be to rank higher in search engines. Generally, websites with higher Domain Authority will outrank websites with lower DA, assuming all other factors are equal.</p>
-                <p>By regularly monitoring your Domain Authority, you can gauge the effectiveness of your SEO strategies. An increasing DA typically indicates that your backlink profile and content strategy are working effectively.</p>
-                
-                <h3>Understanding Page Authority (PA)</h3>
-                <p>Page Authority is a similar metric that predicts how well a specific page will rank on search engine result pages. Like Domain Authority, Page Authority ranges from 1 to 100, with higher scores indicating a greater ability to rank.</p>
-                <p>While Domain Authority measures the strength of an entire domain, Page Authority focuses on individual pages. This is particularly important for evaluating the potential of specific landing pages or content pieces to rank well in search results.</p>
-                
-                <h3>What is Spam Score?</h3>
-                <p>Spam Score is a metric developed by Moz that identifies the percentage of pages on a website that have spammy characteristics. Websites with high Spam Scores are more likely to be penalized by Google or other search engines.</p>
-                <p>Spam Score evaluates multiple factors including link quality, content quality, and technical SEO elements. A high Spam Score (above 5-10%) may indicate issues that need to be addressed to avoid search engine penalties.</p>
-                
-                <h3>Why Marketers Should Check Spam Score</h3>
-                <p>Checking the Spam Score of websites you're considering for backlinks is crucial for maintaining a healthy link profile. Google penalizes websites that have too many spammy backlinks, which can significantly harm your search engine rankings.</p>
-                <p>By using our Domain Authority Checker tool, you can quickly evaluate potential linking partners to ensure they have strong Domain Authority and low Spam Scores before pursuing backlink opportunities.</p>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="AdProfitX Team">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Blog Section -->
-    <section class="section tab-content" id="blog-tab">
-        <div class="container">
-            <h2 class="section-title">SEO Blog & Resources</h2>
+        <!-- Blog Section -->
+        <section class="section" id="blog">
+            <div class="section-title">
+                <h2>Latest Blog Posts</h2>
+                <p>Read our insights on digital marketing and website analytics</p>
+            </div>
             
             <div class="blog-grid">
+                <!-- Blog Post 1 -->
                 <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SEO Trends">
+                    </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">10 Ways to Improve Your Domain Authority in 2025</h3>
-                        <p class="blog-excerpt">Discover proven strategies to boost your website's Domain Authority and improve search engine rankings.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">June 15, 2023</div>
+                        <h3 class="blog-title">10 SEO Trends That Will Dominate 2023</h3>
+                        <p class="blog-excerpt">Discover the most important SEO trends that will impact your website traffic and search rankings this year.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Blog Post 2 -->
                 <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Google Analytics">
+                    </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">The Importance of Page Authority for Content Ranking</h3>
-                        <p class="blog-excerpt">Learn how Page Authority affects your content's visibility and how to optimize for better results.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">June 10, 2023</div>
+                        <h3 class="blog-title">How to Interpret Google Analytics Data</h3>
+                        <p class="blog-excerpt">Learn how to make sense of your Google Analytics data and turn insights into actionable strategies.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Blog Post 3 -->
                 <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Social Media">
+                    </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">How to Reduce Your Website's Spam Score</h3>
-                        <p class="blog-excerpt">Practical tips for identifying and eliminating factors that contribute to a high spam score.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">June 5, 2023</div>
+                        <h3 class="blog-title">Social Media Strategies for Driving Website Traffic</h3>
+                        <p class="blog-excerpt">Effective ways to leverage social media platforms to increase your website traffic and engagement.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Additional blog posts would follow the same pattern -->
+                <!-- Blog Post 4 -->
                 <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1563014959-7aaa83350992?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Content Marketing">
+                    </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">Backlink Analysis: Finding Quality Linking Opportunities</h3>
-                        <p class="blog-excerpt">Learn how to identify high-quality backlink opportunities that can improve your SEO performance.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">May 28, 2023</div>
+                        <h3 class="blog-title">Content Marketing Strategies That Convert</h3>
+                        <p class="blog-excerpt">Learn how to create content that not only attracts visitors but also converts them into customers.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Blog Post 5 -->
                 <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Keyword Research">
+                    </div>
                     <div class="blog-content">
-                        <h3 class="blog-title">Understanding Moz's Link Explorer API</h3>
-                        <p class="blog-excerpt">A comprehensive guide to using Moz's API for advanced SEO analysis and automation.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">May 20, 2023</div>
+                        <h3 class="blog-title">Advanced Keyword Research Techniques</h3>
+                        <p class="blog-excerpt">Go beyond basic keyword research and discover advanced techniques to find profitable keywords.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
                 
+                <!-- Blog Post 6 -->
                 <div class="blog-card">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Technical SEO: The Foundation of Domain Authority</h3>
-                        <p class="blog-excerpt">How technical SEO factors contribute to your Domain Authority and overall search visibility.</p>
-                        <a href="#" class="read-more">Read More</a>
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="PPC Advertising">
                     </div>
-                </div>
-                
-                <div class="blog-card">
                     <div class="blog-content">
-                        <h3 class="blog-title">Content Quality vs. Quantity: What Matters More for SEO?</h3>
-                        <p class="blog-excerpt">Exploring the balance between content quality and quantity for optimal SEO results.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-content">
-                        <h3 class="blog-title">The Role of Social Signals in Domain Authority</h3>
-                        <p class="blog-excerpt">Does social media activity impact Domain Authority? We examine the relationship.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Local SEO vs. Global SEO: Different Approaches to Authority Building</h3>
-                        <p class="blog-excerpt">How SEO strategies differ for local businesses versus global enterprises.</p>
-                        <a href="#" class="read-more">Read More</a>
-                    </div>
-                </div>
-                
-                <div class="blog-card">
-                    <div class="blog-content">
-                        <h3 class="blog-title">Future of SEO: Predictions for 2025 and Beyond</h3>
-                        <p class="blog-excerpt">Expert predictions on how SEO will evolve and what it means for Domain Authority metrics.</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-date">May 15, 2023</div>
+                        <h3 class="blog-title">Maximizing ROI with PPC Advertising</h3>
+                        <p class="blog-excerpt">Strategies to optimize your PPC campaigns and get the highest return on your advertising investment.</p>
+                        <a href="#" class="read-more">Read more <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+            
+            <div style="text-align: center; margin-top: 30px;">
+                <a href="#" class="analyze-btn">View All Blog Posts</a>
+            </div>
+        </section>
 
-    <!-- Privacy Policy Section -->
-    <section class="section tab-content" id="privacy-tab">
-        <div class="container">
-            <h2 class="section-title">Privacy Policy</h2>
+        <!-- Privacy Policy Section -->
+        <section class="section" id="privacy">
+            <div class="section-title">
+                <h2>Privacy Policy</h2>
+                <p>How we collect, use, and protect your information</p>
+            </div>
             
             <div class="policy-content">
                 <div class="policy-section">
-                    <h3>1. Introduction</h3>
-                    <p>Welcome to AdProfitX's Privacy Policy. This policy describes how we collect, use, and share your personal information when you use our Domain Authority Checker tool and related services.</p>
+                    <h3>Information We Collect</h3>
+                    <p>When you use our website traffic checker tool, we may collect the following information:</p>
+                    <ul>
+                        <li>Domain names that you submit for analysis</li>
+                        <li>Your IP address for security and analytics purposes</li>
+                        <li>Information about your device and browser</li>
+                        <li>Usage data through cookies and similar technologies</li>
+                    </ul>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>2. Information We Collect</h3>
-                    <p>We may collect the following types of information:</p>
-                    <p>- <strong>Personal Information:</strong> When you contact us or sign up for our services, we may collect your name, email address, and other contact details.</p>
-                    <p>- <strong>Usage Data:</strong> We collect information about how you interact with our website, including your IP address, browser type, pages visited, and time spent on our site.</p>
-                    <p>- <strong>URL Information:</strong> When you use our Domain Authority Checker tool, we process the URLs you submit to provide the requested SEO metrics.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>3. How We Use Your Information</h3>
+                    <h3>How We Use Your Information</h3>
                     <p>We use the information we collect for the following purposes:</p>
-                    <p>- To provide and maintain our Domain Authority Checker service</p>
-                    <p>- To improve, personalize, and expand our website and services</p>
-                    <p>- To understand and analyze how you use our website</p>
-                    <p>- To develop new products, services, features, and functionality</p>
-                    <p>- To communicate with you, either directly or through one of our partners, for customer service, updates, and marketing purposes</p>
+                    <ul>
+                        <li>To provide and improve our website traffic estimation services</li>
+                        <li>To analyze trends and user behavior to enhance our tool</li>
+                        <li>To prevent abuse and ensure the security of our service</li>
+                        <li>To communicate with you about updates and new features</li>
+                    </ul>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>4. Cookies and Tracking Technologies</h3>
-                    <p>We use cookies and similar tracking technologies to track activity on our website and store certain information. The technologies we use may include:</p>
-                    <p>- <strong>Cookies:</strong> These are small files stored on your device that enable us to provide certain features and functionality.</p>
-                    <p>- <strong>Google Analytics:</strong> We use Google Analytics to help us understand how our visitors use the website.</p>
-                    <p>- <strong>AdSense:</strong> We use Google AdSense to display advertisements on our website.</p>
+                    <h3>Data Storage and Security</h3>
+                    <p>We implement appropriate security measures to protect your information from unauthorized access, alteration, or destruction. We retain domain search data for analytical purposes for up to 12 months.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>5. Data Security</h3>
-                    <p>We implement appropriate technical and organizational measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction.</p>
+                    <h3>Third-Party Services</h3>
+                    <p>We may use third-party services such as Google Analytics to analyze website usage. These services may collect information about your use of our website through cookies.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>6. Changes to This Privacy Policy</h3>
-                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+                    <h3>Your Rights</h3>
+                    <p>You have the right to request access to, correction of, or deletion of your personal data. You can also object to processing of your personal data in certain circumstances.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>7. Contact Us</h3>
-                    <p>If you have any questions about this Privacy Policy, please contact us at privacy@adprofitx.com.</p>
+                    <h3>Contact Us</h3>
+                    <p>If you have any questions about our Privacy Policy, please contact us at privacy@adprofitx.com.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Terms and Conditions Section -->
-    <section class="section tab-content" id="terms-tab">
-        <div class="container">
-            <h2 class="section-title">Terms and Conditions</h2>
+        <!-- Terms and Conditions Section -->
+        <section class="section" id="terms">
+            <div class="section-title">
+                <h2>Terms and Conditions</h2>
+                <p>Rules for using our website and services</p>
+            </div>
             
             <div class="policy-content">
                 <div class="policy-section">
-                    <h3>1. Acceptance of Terms</h3>
-                    <p>By accessing and using the Domain Authority Checker website ("Service"), you accept and agree to be bound by the terms and provision of this agreement.</p>
+                    <h3>Acceptance of Terms</h3>
+                    <p>By accessing and using the AdProfitX website traffic checker tool, you accept and agree to be bound by these Terms and Conditions.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>2. Use License</h3>
-                    <p>Permission is granted to temporarily use the Domain Authority Checker tool for personal and commercial purposes. This is the grant of a license, not a transfer of title.</p>
+                    <h3>Use License</h3>
+                    <p>We grant you a limited, non-exclusive, non-transferable license to use our website traffic checker for personal and commercial purposes subject to these terms.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>3. Disclaimer</h3>
-                    <p>The materials on AdProfitX's website are provided on an 'as is' basis. AdProfitX makes no warranties, expressed or implied, and hereby disclaims and negates all other warranties including, without limitation, implied warranties or conditions of merchantability, fitness for a particular purpose, or non-infringement of intellectual property or other violation of rights.</p>
+                    <h3>Disclaimer</h3>
+                    <p>Our website traffic estimates are based on statistical models and public data. We do not guarantee the accuracy of these estimates and they should not be relied upon as exact measurements.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>4. Limitations</h3>
-                    <p>In no event shall AdProfitX or its suppliers be liable for any damages (including, without limitation, damages for loss of data or profit, or due to business interruption) arising out of the use or inability to use the materials on AdProfitX's website, even if AdProfitX or an authorized representative has been notified orally or in writing of the possibility of such damage.</p>
+                    <h3>Limitations of Liability</h3>
+                    <p>AdProfitX shall not be held liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of or inability to use our services.</p>
                 </div>
                 
                 <div class="policy-section">
-                    <h3>5. Accuracy of Materials</h3>
-                    <p>The materials appearing on AdProfitX's website could include technical, typographical, or photographic errors. AdProfitX does not warrant that any of the materials on its website are accurate, complete or current.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>6. Links</h3>
-                    <p>AdProfitX has not reviewed all of the sites linked to its website and is not responsible for the contents of any such linked site. The inclusion of any link does not imply endorsement by AdProfitX of the site. Use of any such linked website is at the user's own risk.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>7. Modifications</h3>
-                    <p>AdProfitX may revise these terms of service for its website at any time without notice. By using this website you are agreeing to be bound by the then current version of these terms of service.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>8. Governing Law</h3>
-                    <p>These terms and conditions are governed by and construed in accordance with the laws of the United States and you irrevocably submit to the exclusive jurisdiction of the courts in that location.</p>
+                    <h3>Governing Law</h3>
+                    <p>These terms shall be governed by and construed in accordance with the laws of the State of Delaware, without regard to its conflict of law provisions.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Disclaimer Section -->
-    <section class="section tab-content" id="disclaimer-tab">
-        <div class="container">
-            <h2 class="section-title">Disclaimer</h2>
-            
-            <div class="policy-content">
-                <div class="policy-section">
-                    <h3>1. General Information</h3>
-                    <p>The information provided by AdProfitX ("we," "us," or "our") on Domain Authority Checker (the "Service") is for general informational purposes only. All information on the Service is provided in good faith, however we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the Service.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>2. External Links Disclaimer</h3>
-                    <p>The Service may contain (or you may be sent through the Service) links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>3. Professional Disclaimer</h3>
-                    <p>The Service cannot and does not contain SEO advice. The SEO information is provided for general informational and educational purposes only and is not a substitute for professional advice. Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of SEO advice.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>4. Affiliates Disclaimer</h3>
-                    <p>The Service may contain links to affiliate websites, and we receive an affiliate commission for any purchases made by you on the affiliate website using such links. We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn advertising fees by linking to Amazon.com and affiliated websites.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>5. Testimonials Disclaimer</h3>
-                    <p>The Service may contain testimonials by users of our products and/or services. These testimonials reflect the real-life experiences and opinions of such users. However, the experiences are personal to those particular users, and may not necessarily be representative of all users of our products and/or services. We do not claim, and you should not assume, that all users will have the same experiences.</p>
-                </div>
-                
-                <div class="policy-section">
-                    <h3>6. Contact Us</h3>
-                    <p>If you have any questions about this Disclaimer, you can contact us at support@adprofitx.com.</p>
-                </div>
+        <!-- Contact Section -->
+        <section class="section" id="contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>Get in touch with our team</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="section tab-content" id="contact-tab">
-        <div class="container">
-            <h2 class="section-title">Contact Us</h2>
             
             <div class="contact-container">
                 <div class="contact-info">
-                    <h3>AdProfitX Contact Information</h3>
-                    
-                    <div class="contact-details">
-                        <p><i class="fas fa-envelope"></i> Email: support@adprofitx.com</p>
-                        <p><i class="fas fa-phone"></i> Phone: +1 (555) 123-4567</p>
-                        <p><i class="fas fa-map-marker-alt"></i> Address: 123 SEO Street, Digital City, DC 10101, United States</p>
-                        <p><i class="fas fa-clock"></i> Business Hours: Monday-Friday, 9:00 AM - 5:00 PM EST</p>
-                    </div>
-                    
-                    <div class="social-links">
-                        <h3>Follow Us</h3>
-                        <p>
-                            <a href="#" style="color: #2563eb; margin-right: 15px;"><i class="fab fa-twitter fa-lg"></i></a>
-                            <a href="#" style="color: #2563eb; margin-right: 15px;"><i class="fab fa-facebook fa-lg"></i></a>
-                            <a href="#" style="color: #2563eb; margin-right: 15px;"><i class="fab fa-linkedin fa-lg"></i></a>
-                            <a href="#" style="color: #2563eb;"><i class="fab fa-instagram fa-lg"></i></a>
-                        </p>
-                    </div>
+                    <h3>Get In Touch</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Business Ave, Suite 100<br>Wilmington, DE 19801</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@adprofitx.com</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <span>Monday - Friday: 9AM - 5PM EST</span>
+                        </li>
+                    </ul>
                 </div>
                 
                 <div class="contact-form">
                     <h3>Send Us a Message</h3>
-                    <form id="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject">
-                        <textarea placeholder="Your Message" required></textarea>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        
                         <button type="submit" class="submit-btn">Send Message</button>
                     </form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Bottom Ad Slot -->
-    <div class="container ad-section">
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4313544696010088"
-             crossorigin="anonymous"></script>
-        <ins class="adsbygoogle"
-             style="display:block"
-             data-ad-client="ca-pub-4313544696010088"
-             data-ad-slot="2931939531"
-             data-ad-format="auto"
-             data-full-width-responsive="true"></ins>
-        <script>
-             (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
+        <!-- Ad Container -->
+        <div class="ad-container">
+            <p>Ad Space - Google AdSense</p>
+        </div>
     </div>
 
     <!-- Footer -->
@@ -992,16 +1175,32 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>AdProfitX</h3>
-                    <p>Providing free SEO tools to help marketers and website owners improve their online presence.</p>
+                    <p>Providing accurate website traffic estimates and digital marketing insights to help businesses grow.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Quick Links</h3>
+                    <h3>Tools</h3>
                     <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
+                        <li><a href="#">Website Traffic Checker</a></li>
+                        <li><a href="#">Keyword Research Tool</a></li>
+                        <li><a href="#">Backlink Analyzer</a></li>
+                        <li><a href="#">SEO Audit Tool</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
                         <li><a href="#blog">Blog</a></li>
                         <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
                 
@@ -1009,200 +1208,180 @@
                     <h3>Legal</h3>
                     <ul class="footer-links">
                         <li><a href="#privacy">Privacy Policy</a></li>
-                        <li><a href="#terms">Terms & Conditions</a></li>
-                        <li><a href="#disclaimer">Disclaimer</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Our Tools</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Domain Authority Checker</a></li>
-                        <li><a href="#">Backlink Analyzer</a></li>
-                        <li><a href="#">Keyword Research Tool</a></li>
-                        <li><a href="#">Website Speed Test</a></li>
+                        <li><a href="#terms">Terms of Service</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
                     </ul>
                 </div>
             </div>
             
-            <div class="copyright">
-                © 2025 AdProfitX - Free SEO Tools. All Rights Reserved.
+            <div class="footer-bottom">
+                <p>&copy; 2023 AdProfitX. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const form = document.getElementById('domain-checker-form');
-            const resultsBox = document.getElementById('results-box');
-            const loading = document.getElementById('loading');
-            const daValue = document.getElementById('da-value');
-            const paValue = document.getElementById('pa-value');
-            const spamValue = document.getElementById('spam-value');
-            const saveApiBtn = document.getElementById('save-api');
-            const mobileMenuBtn = document.getElementById('mobile-menu');
-            const navMenu = document.getElementById('nav-menu');
-            const tabs = document.querySelectorAll('.tab');
-            const tabContents = document.querySelectorAll('.tab-content');
-            
-            // Mobile menu toggle
-            mobileMenuBtn.addEventListener('click', function() {
-                navMenu.classList.toggle('active');
+        // DOM Elements
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navMenu = document.getElementById('navMenu');
+        const themeToggle = document.getElementById('themeToggle');
+        const domainInput = document.getElementById('domainInput');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const exampleChips = document.querySelectorAll('.example-chip');
+        const resultsSection = document.getElementById('results');
+        const reportDomain = document.getElementById('reportDomain');
+        const newAnalysisBtn = document.getElementById('newAnalysisBtn');
+        const contactForm = document.getElementById('contactForm');
+        
+        // Toggle Mobile Menu
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            mobileMenuBtn.innerHTML = navMenu.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+        
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
             });
+        });
+        
+        // Theme Toggle
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            themeToggle.innerHTML = document.body.classList.contains('dark-mode')
+                ? '<i class="fas fa-sun"></i>'
+                : '<i class="fas fa-moon"></i>';
             
-            // Tab functionality
-            tabs.forEach(tab => {
-                tab.addEventListener('click', function() {
-                    const tabId = this.getAttribute('data-tab');
-                    
-                    // Remove active class from all tabs and contents
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tabContents.forEach(c => c.classList.remove('active'));
-                    
-                    // Add active class to current tab and content
-                    this.classList.add('active');
-                    document.getElementById(`${tabId}-tab`).classList.add('active');
-                });
+            // Save theme preference to localStorage
+            localStorage.setItem('theme', document.body.classList.contains('dark-mode') ? 'dark' : 'light');
+        });
+        
+        // Check for saved theme preference
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        // Analyze Button Click
+        analyzeBtn.addEventListener('click', analyzeDomain);
+        
+        // Enter Key in Input Field
+        domainInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                analyzeDomain();
+            }
+        });
+        
+        // Example Chips Click
+        exampleChips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                domainInput.value = chip.getAttribute('data-domain');
+                analyzeDomain();
             });
+        });
+        
+        // New Analysis Button
+        newAnalysisBtn.addEventListener('click', () => {
+            resultsSection.classList.remove('results-visible');
+            domainInput.value = '';
+            domainInput.focus();
+        });
+        
+        // Contact Form Submission
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+        
+        // Analyze Domain Function
+        function analyzeDomain() {
+            const domain = domainInput.value.trim();
             
-            // Default Moz API credentials (user can replace with their own)
-            let accessID = 'mozscape-8a4c4eb146'; // Example only - user should replace
-            let apiKey = '7c77d487a27e3d7b2a9ef324a5de5e4e'; // Example only - user should replace
-            
-            // Check if user has saved API credentials
-            if (localStorage.getItem('mozAccessID')) {
-                accessID = localStorage.getItem('mozAccessID');
-                document.getElementById('access-id').value = accessID;
+            if (!domain) {
+                alert('Please enter a domain name');
+                return;
             }
             
-            if (localStorage.getItem('mozAPIKey')) {
-                apiKey = localStorage.getItem('mozAPIKey');
-                document.getElementById('api-key').value = apiKey;
+            // Simple domain validation
+            const domainRegex = /^[a-zA-Z0-9]([a-zA-Z0-9\-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$/;
+            if (!domainRegex.test(domain)) {
+                alert('Please enter a valid domain name');
+                return;
             }
             
-            // Save API credentials
-            saveApiBtn.addEventListener('click', function() {
-                const newAccessID = document.getElementById('access-id').value;
-                const newAPIKey = document.getElementById('api-key').value;
+            // Show loading state
+            analyzeBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Analyzing...';
+            analyzeBtn.disabled = true;
+            
+            // Simulate API call with timeout
+            setTimeout(() => {
+                // Update results with simulated data
+                reportDomain.textContent = domain;
                 
-                if (newAccessID && newAPIKey) {
-                    accessID = newAccessID;
-                    apiKey = newAPIKey;
-                    
-                    localStorage.setItem('mozAccessID', newAccessID);
-                    localStorage.setItem('mozAPIKey', newAPIKey);
-                    
-                    alert('API credentials saved successfully!');
-                } else {
-                    alert('Please enter both Access ID and API Key');
-                }
-            });
-            
-            // Form submission
-            form.addEventListener('submit', function(e) {
+                // Generate random metrics based on domain
+                const monthlyVisits = Math.floor(Math.random() * 1000000) + 50000;
+                const uniqueVisitors = Math.floor(monthlyVisits * 0.75);
+                const pageViews = (Math.random() * 5 + 1).toFixed(1);
+                const avgDurationMin = Math.floor(Math.random() * 4);
+                const avgDurationSec = Math.floor(Math.random() * 60);
+                const bounceRate = Math.floor(Math.random() * 50 + 30);
+                const globalRank = Math.floor(Math.random() * 100000) + 1000;
+                
+                // Update metric values
+                document.getElementById('monthlyVisits').textContent = formatNumber(monthlyVisits);
+                document.getElementById('uniqueVisitors').textContent = formatNumber(uniqueVisitors);
+                document.getElementById('pageViews').textContent = pageViews;
+                document.getElementById('avgDuration').textContent = `${avgDurationMin}:${avgDurationSec.toString().padStart(2, '0')}`;
+                document.getElementById('bounceRate').textContent = `${bounceRate}%`;
+                document.getElementById('globalRank').textContent = `#${formatNumber(globalRank)}`;
+                
+                // Show results section
+                resultsSection.classList.add('results-visible');
+                
+                // Scroll to results
+                resultsSection.scrollIntoView({ behavior: 'smooth' });
+                
+                // Reset button state
+                analyzeBtn.innerHTML = 'Analyze';
+                analyzeBtn.disabled = false;
+            }, 1500);
+        }
+        
+        // Helper function to format numbers with commas
+        function formatNumber(num) {
+            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 
-                const websiteUrl = document.getElementById('website-url').value.trim();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
                 
-                if (!websiteUrl) {
-                    alert('Please enter a valid URL');
-                    return;
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
                 }
-                
-                // Show loading state
-                loading.classList.add('visible');
-                resultsBox.classList.remove('visible');
-                
-                // Extract domain from URL
-                let domain;
-                try {
-                    domain = new URL(websiteUrl).hostname;
-                } catch (e) {
-                    // If URL is invalid, try adding https://
-                    try {
-                        domain = new URL('https://' + websiteUrl).hostname;
-                    } catch (e) {
-                        alert('Please enter a valid URL');
-                        loading.classList.remove('visible');
-                        return;
-                    }
-                }
-                
-                // Check domain authority using Moz API
-                checkDomainAuthority(domain);
             });
-            
-            function checkDomainAuthority(domain) {
-                // In a real implementation, you would make a server-side call to the Moz API
-                // This is a client-side simulation for demonstration purposes
-                
-                // Simulate API call delay
-                setTimeout(() => {
-                    // For demo purposes, we'll show example data
-                    // In a real implementation, you would use the Moz API with the provided credentials
-                    
-                    // Simulate API failure 30% of the time to show demo values
-                    const isApiFailure = Math.random() < 0.3;
-                    
-                    if (isApiFailure) {
-                        // Show demo values when API fails
-                        daValue.textContent = '45';
-                        paValue.textContent = '38';
-                        spamValue.textContent = '3%';
-                    } else {
-                        // Generate semi-random values based on domain for demo
-                        const domainHash = domain.split('').reduce((a, b) => {
-                            a = ((a << 5) - a) + b.charCodeAt(0);
-                            return a & a;
-                        }, 0);
-                        
-                        const da = Math.abs(domainHash % 100);
-                        const pa = Math.abs((domainHash + 123) % 100);
-                        const spam = Math.abs(domainHash % 10);
-                        
-                        daValue.textContent = da;
-                        paValue.textContent = pa;
-                        spamValue.textContent = spam + '%';
-                    }
-                    
-                    // Hide loading and show results
-                    loading.classList.remove('visible');
-                    resultsBox.classList.add('visible');
-                }, 1500);
-            }
-            
-            // Contact form submission
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', function(e) {
-                    e.preventDefault();
-                    alert('Thank you for your message! We will get back to you soon.');
-                    contactForm.reset();
-                });
-            }
-            
-            // Note: In a production environment, you would implement actual Moz API integration
-            // The Moz API requires server-side implementation due to CORS restrictions
-            // Here's what the actual API implementation would look like on the server side:
-            /*
-            async function getMozData(url) {
-                const auth = Buffer.from(`${accessID}:${apiKey}`).toString('base64');
-                const response = await fetch('https://lsapi.seomoz.com/v2/url_metrics', {
-                    method: 'POST',
-                    headers: {
-                        'Authorization': `Basic ${auth}`,
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({
-                        targets: [url]
-                    })
-                });
-                
-                const data = await response.json();
-                return data;
-            }
-            */
+        });
+        
+        // Initialize the page with some random examples
+        window.addEventListener('load', () => {
+            // You can add any initialization code here
         });
     </script>
+    
+    <!-- Google AdSense Script -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4313544696010088" crossorigin="anonymous"></script>
 </body>
 </html>
